@@ -1,17 +1,22 @@
 package app;
 
-public class Application {
-    
-        //
-        //              )        (                 ) (           (         (
-        //           ( /(   *   ))\ )        (  ( /( )\ )        )\ )  (   )\ )
-        //     (   ( )\())` )  /(()/((       )\ )\()|()/(  (    (()/(  )\ (()/(
-        //     )\  )((_)\  ( )(_))(_))\    (((_|(_)\ /(_)) )\    /(_)|((_) /(_))
-        //    ((_)((_)((_)(_(_()|_))((_)   )\___ ((_|_))_ ((_)  (_)) )\___(_))
-        //    __   _____ _____ ___ ___    ___ ___  ___  ___   ___ ___ ___   _
-        //    \ \ / / _ \_   _| _ \ __|  / __/ _ \|   \| __| |_ _/ __|_ _| | |
-        //     \ V / (_) || | |   / _|  | (_| (_) | |) | _|   | | (__ | |  |_|
-        //      \_/ \___/ |_| |_|_\___|  \___\___/|___/|___| |___\___|___| (_)
-        //
+import app.Ami;
 
+public class Application {
+
+    public static void main(String args[]) {
+
+        Ami jeanMiche = new Ami(2, "Jean-Miche");
+        Ami medhiTerane = new Ami(3, "Medhi Térané");
+        Ami alainTerieur = new Ami(4, "Alain térieur");
+
+        System.out.println(jeanMiche.getNom() + " peut encore boire " + jeanMiche.getBieresRestantes() + " bières");
+        jeanMiche.boitUneBiere();
+        System.out.println(jeanMiche.getNom() + " peut encore boire " + jeanMiche.getBieresRestantes() + " bières");
+        jeanMiche.boitUneBiere();
+        jeanMiche.boitUneBiere();
+        medhiTerane.boitUneBiere();
+        System.out.println(medhiTerane.getNom() + " peut encore boire " + medhiTerane.getBieresRestantes() + " bières");
+        alainTerieur.boitUneBiere();
+    }
 }
